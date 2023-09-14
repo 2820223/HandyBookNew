@@ -40,6 +40,13 @@ class BoshSahifaFragment : Fragment() {
             tab.setCustomView(view)
         }.attach()
 
+        binding.productPager2.adapter = ProductPagerAdapter(requireActivity(), productType)
+//
+//        TabLayoutMediator(binding.productTab, binding.productPager2) { tab, position ->
+//            val view = LayoutInflater.from(container?.context).inflate(R.layout.tablayout,null,false)
+//            view.findViewById<TextView>(R.id.product_tab_title).text = productType[position]
+//            tab.setCustomView(view)
+//        }.attach()
         return binding.root
     }
 
@@ -57,12 +64,12 @@ class BoshSahifaFragment : Fragment() {
     private fun loadProductType() {
         val list = mutableListOf<String>()
         productType.add("Barchasi")
-        productType.add("Samsung")
-        productType.add("Apple")
-        productType.add("Honor")
-        productType.add("Redmi")
-        productType.add("Vivo")
-        productType.add("Tecno")
-        productType.add("Artel")
+        productType.add("Badiiy")
+        productType.add("Ilmiy")
+        productType.add("Darsliklar")
+        productType.add("Tarixiy")
+        productType.add("Bolalar uchun")
+        productType.add("Shaxsiy rivojlanish")
+        productType.add("Diniy")
     }
 }
